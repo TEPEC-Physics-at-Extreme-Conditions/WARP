@@ -44,7 +44,7 @@ and the stress decomposition. Cite:
 > F. Knoop *et al.*,
 > *TDEP: Temperature Dependent Effective Potentials*,
 > J. Open Source Softw. **9**, 6150 (2024).
-
+{% raw %}
 ```bibtex
 @article{hellman2011,
   author  = {Hellman, O. and Abrikosov, I. A. and Simak, S. I.},
@@ -74,7 +74,7 @@ and the stress decomposition. Cite:
   year    = {2024}
 }
 ```
-
+{% endraw %}
 ## CrysViz
 
 [CrysViz](https://crysviz.org), a viewer for the structures and trajectories that WARP writes, is
