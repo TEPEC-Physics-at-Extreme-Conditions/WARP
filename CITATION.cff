@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use WARP, please cite the WARP paper below, together with TDEP."
+title: "WARP: Wyckoff-constrained Anharmonic Relaxation at Pressure and temperature"
+type: software
+license: GPL-3.0-or-later
+repository-code: "https://github.com/TEPEC-Physics-at-Extreme-Conditions/WARP"
+url: "https://tepec-physics-at-extreme-conditions.github.io/WARP/"
+version: "1.0.0"
+date-released: "2026-11-10"
+authors:
+  - family-names: "ten Eikelder"
+    given-names: "Henricus R. A."
+    email: henricus.ten.eikelder@liu.se
+  - family-names: "Trybel"
+    given-names: "Florian"
+    email: florian.trybel@liu.se
+preferred-citation:
+  type: article
+  title: "Finite temperature and pressure structural relaxations including zero-point motion and anharmonicity"
+  authors:
+    - family-names: "ten Eikelder"
+      given-names: "Henricus R. A."
+    - family-names: "Knoop"
+      given-names: "Florian"
+    - family-names: "Trybel"
+      given-names: "Florian"
+  year: 2026
+  journal: "arXiv preprint"
+  identifiers:
+    - type: other
+      value: "arXiv:2611.12736"
+  url: "https://arxiv.org/abs/2611.12736"

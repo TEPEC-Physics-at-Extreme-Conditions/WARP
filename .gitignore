@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.egg-info/
+*.ckpt
+*.pt
+*.bak
+*.pre_*
+*copy.txt
+.DS_Store
+build/
+dist/
+site/
+docs/REFERENCE.md

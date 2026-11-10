@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "warpt"
+dynamic = ["version"]
+description = "WARP: Wyckoff-constrained Anharmonic Relaxation at Pressure and temperature (TDEP sampling with forces from Quantum ESPRESSO, VASP or a machine-learned interatomic potential)."
+readme = "README.md"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE", "NOTICE"]
+requires-python = ">=3.10"
+authors = [
+  { name = "Henricus R. A. ten Eikelder", email = "henricus.ten.eikelder@liu.se" },
+  { name = "Florian Trybel", email = "florian.trybel@liu.se" },
+]
+classifiers = [
+  "Programming Language :: Python :: 3",
+]
+
+dependencies = [
+  "numpy>=1.24",
+  "spglib>=2.0",
+  "h5py>=3.9",
+  "ase>=3.22",
+]
+
+[project.optional-dependencies]
+upet = [
+  "upet>=0.2",
+]
+
+mace = [
+  "upet>=0.2",
+  "mace-torch>=0.3.10",
+]
+
+[project.urls]
+Homepage = "https://github.com/TEPEC-Physics-at-Extreme-Conditions/WARP"
+Repository = "https://github.com/TEPEC-Physics-at-Extreme-Conditions/WARP"
+Documentation = "https://tepec-physics-at-extreme-conditions.github.io/WARP/"
+Paper = "https://arxiv.org/abs/2611.12736"
+
+[project.scripts]
+warpt = "warpt.orchestrator:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+warpt = ["data/*.json"]
+
+[tool.setuptools.dynamic]
+version = { attr = "warpt.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["warpt*"]

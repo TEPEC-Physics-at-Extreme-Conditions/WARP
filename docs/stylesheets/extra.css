@@ -1,0 +1,82 @@
+/*
+ * This file is part of WARP. Copyright (C) 2026 The WARP developers (see NOTICE).
+ * SPDX-License-Identifier: GPL-3.0-or-later
+ */
+/*
+ * WARP site colours, taken from the project icon (docs/assets/warp_icon.png):
+ *   navy background  #0b0f1e
+ *   atom blue        #2f6db5
+ *   grid violet      #6f63d9
+ *   anvil steel      #8a9bc4
+ *   amber atom/bond  #e8a83a
+ * mkdocs.yml selects primary: custom and accent: custom, so Material reads these variables.
+ */
+
+/* ---- Light scheme ------------------------------------------------------ */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:        #0b0f1e;
+  --md-primary-fg-color--light: #2a3456;
+  --md-primary-fg-color--dark:  #05070f;
+  --md-primary-bg-color:        #ffffff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.7);
+
+  /* Darker amber than the icon so hovered links stay legible on white. */
+  --md-accent-fg-color:              #b97a12;
+  --md-accent-fg-color--transparent: rgba(232, 168, 58, 0.12);
+  --md-accent-bg-color:              #0b0f1e;
+  --md-accent-bg-color--light:       rgba(11, 15, 30, 0.7);
+
+  --md-typeset-a-color: #2f6db5;
+
+  --md-footer-bg-color:       #0b0f1e;
+  --md-footer-bg-color--dark: #070a15;
+}
+
+/* ---- Dark scheme: the icon's navy as background tone ------------------- */
+[data-md-color-scheme="slate"] {
+  --md-hue: 229;
+
+  --md-default-bg-color:          #0f1428;
+  --md-default-bg-color--light:   rgba(15, 20, 40, 0.54);
+  --md-default-bg-color--lighter: rgba(15, 20, 40, 0.26);
+  --md-default-bg-color--lightest: rgba(15, 20, 40, 0.07);
+
+  --md-primary-fg-color:        #0b0f1e;
+  --md-primary-fg-color--light: #2a3456;
+  --md-primary-fg-color--dark:  #05070f;
+  --md-primary-bg-color:        #e6ebf7;
+  --md-primary-bg-color--light: rgba(230, 235, 247, 0.7);
+
+  --md-accent-fg-color:              #e8a83a;
+  --md-accent-fg-color--transparent: rgba(232, 168, 58, 0.12);
+  --md-accent-bg-color:              #0b0f1e;
+  --md-accent-bg-color--light:       rgba(11, 15, 30, 0.7);
+
+  --md-typeset-a-color: #7ea8e6;
+
+  --md-code-bg-color:  #161d38;
+  --md-code-hl-color:  rgba(111, 99, 217, 0.25);
+
+  --md-footer-bg-color:       #0b0f1e;
+  --md-footer-bg-color--dark: #070a15;
+}
+
+/* A thin steel-blue rule separates the navy header from the page. */
+.md-header {
+  border-bottom: 1px solid rgba(138, 155, 196, 0.25);
+}
+
+/* The icon carries its own navy square; round it slightly and give it room. */
+.md-header__button.md-logo img,
+.md-nav__button.md-logo img {
+  border-radius: 4px;
+}
+
+.md-header__button.md-logo img {
+  height: 1.6rem;
+}
+
+/* Table headers pick up the brand blue as a faint tint. */
+.md-typeset table:not([class]) th {
+  background-color: rgba(47, 109, 181, 0.1);
+}

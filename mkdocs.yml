@@ -1,0 +1,122 @@
+site_name: WARP
+site_description: >-
+  WARP — Wyckoff-constrained Anharmonic Relaxation at Pressure and temperature:
+  finite-temperature, finite-pressure crystal-structure relaxation on the stochastic
+  temperature-dependent effective potential, with forces from Quantum ESPRESSO, VASP or a
+  machine-learned interatomic potential.
+# Required by navigation.instant, which reads the page list from the generated sitemap.xml.
+site_url: https://tepec-physics-at-extreme-conditions.github.io/WARP/
+repo_url: https://github.com/TEPEC-Physics-at-Extreme-Conditions/WARP
+repo_name: TEPEC-Physics-at-Extreme-Conditions/WARP
+docs_dir: docs
+copyright: 'Copyright &copy; 2026 H. R. A. ten Eikelder and F. Trybel &middot; GPL-3.0-or-later &middot; Cite WARP: <a href="https://arxiv.org/abs/2611.12736">arXiv:2611.12736</a>'
+
+theme:
+  name: material
+  logo: assets/warp_icon.png
+  favicon: assets/favicon.png
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - content.code.annotate
+    - search.highlight
+  # Colours are defined in docs/stylesheets/extra.css to match the project icon.
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.arithmatex:
+      generic: true
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+# Generator script and its single-file output; the per-module pages under reference/ are published instead.
+# Python bytecode left in docs/ by running the generator is never published.
+exclude_docs: |
+  REFERENCE.md
+  make_reference.py
+  __pycache__/
+
+nav:
+  - Home: index.md
+  - Getting started:
+      - Installation: installation.md
+      - Quick start: quickstart.md
+      - Input files: inputs.md
+  - Using WARP:
+      - Method: method.md
+      - Command line: cli.md
+      - Run directory and resume: run-directory.md
+      - Post-processing showcase: postprocessing.md
+      - Force engines: forces.md
+      - Structure converter: structconv.md
+      - Environment variables: environment.md
+      - Running on a cluster: hpc.md
+      - Troubleshooting: troubleshooting.md
+  - Module reference:
+      - Overview: reference/index.md
+      - All functions: reference/all-functions.md
+      - warpt.orchestrator: reference/orchestrator.md
+      - warpt.workflow_preconditioning: reference/workflow_preconditioning.md
+      - warpt.workflow_vc_relax: reference/workflow_vc_relax.md
+      - warpt.tdep_sampling: reference/tdep_sampling.md
+      - warpt.tdep_extract_fc: reference/tdep_extract_fc.md
+      - warpt.tdep_collect: reference/tdep_collect.md
+      - warpt.phonon_stress: reference/phonon_stress.md
+      - warpt.compliance_update: reference/compliance_update.md
+      - warpt.noise_gain: reference/noise_gain.md
+      - warpt.Wyckoff_Projector: reference/Wyckoff_Projector.md
+      - warpt.context_state: reference/context_state.md
+      - warpt.resume: reference/resume.md
+      - warpt.restart_check: reference/restart_check.md
+      - warpt.runner: reference/runner.md
+      - warpt.MLIP_interface: reference/MLIP_interface.md
+      - warpt.VASP_interface: reference/VASP_interface.md
+      - warpt.upet_relax: reference/upet_relax.md
+      - warpt.structconv: reference/structconv.md
+      - warpt.io_poscar: reference/io_poscar.md
+      - warpt.io_qe: reference/io_qe.md
+      - warpt.io_workflow: reference/io_workflow.md
+      - warpt.tensors: reference/tensors.md
+      - warpt.constants: reference/constants.md
+      - warpt.utilities: reference/utilities.md
+      - warpt.validity: reference/validity.md
+      - warpt.resources: reference/resources.md
+      - warpt.timing: reference/timing.md
+      - warpt.get_frames: reference/get_frames.md
+      - warpt.metrics: reference/metrics.md
+      - warpt.trajectory: reference/trajectory.md
+      - warpt.plot_phonons_iter: reference/plot_phonons_iter.md
+      - warpt.band_yaml: reference/band_yaml.md
+      - warpt.static_elastic: reference/static_elastic.md
+  - Citing WARP: citing.md
